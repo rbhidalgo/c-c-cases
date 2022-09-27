@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-// import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.scss'
-// const ThreeSixty = dynamic(() => import('react-360-view'), {ssr: false});
 
 
 export default function Home() {
@@ -27,16 +25,6 @@ export default function Home() {
         </div>
         <div className={styles.hero__image}>
           <img src="/img/case-02/cturn_33.png" alt="" />
-        {/* <div className={styles.threesixty}>
-          <ThreeSixty
-              amount={36}
-              autoplay
-              paddingIndex="true"
-              spinReverse="true"
-              imagePath="/img/case-02/"
-              fileName="cturn_{index}.png"
-          />
-        </div> */}
         </div>
         </div>
       </section>

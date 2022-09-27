@@ -194,16 +194,35 @@
       margin-top: 15px;
       margin-bottom: 15px;
     }
+    h3 {
+      font-size: clamp(18px, 1.5vw, 22px);
+    }
   }
 }
 
-.threesixty {
-  max-width: 800px;
-  position: relative;
-  pointer-events: none;
-  .v360-viewer-container {
-    .v360-viewport {
-      background-color: unset!important;
-    }
+.reviews {
+  background: url(../public/img/pattern-leather.jpg);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__header {
+    margin-bottom: 50px;
+  }
+  &__container {
+    padding: 0 50px;
+  }
+  &__card {
+    padding: 50px 36px;
+    background: #F2F2F2;
+    color: $color-secondary;
+  }
+  &__quote {
+    font-size: 100px;
+    text-align: center;
+    line-height: 1;
+    color: #D9D9D9;
+  }
+  &__review {
+    margin-bottom: 20px;
   }
 }

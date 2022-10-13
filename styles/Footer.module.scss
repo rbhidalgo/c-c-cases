@@ -1,18 +1,22 @@
+@import "mixins";
 .footer {
   text-align: center;
   background-color: #000000;
   color: #ffffff;
   .container {
-    padding: 50px;
+    padding: 50px 25px;
+    display: flex;
+    justify-content: space-between;
+    @include bp(tb) {
+      flex-direction: column;
+      gap: 10px;
+    }
     .social {
-      margin-bottom: 20px;
-      a {
-        &:nth-child(2){
-          padding: 0 10px;
-        }
-        &:nth-child(3){
-          padding-right: 10px;
-        }
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      @include bp(tb) {
+        order: -1;
       }
     }
     .small {

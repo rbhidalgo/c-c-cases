@@ -39,3 +39,18 @@ main {
 .swiper {
   overflow: visible!important;
 }
+
+.swiper-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+  width: 100%;
+  justify-content: center;
+  .swiper-button-next, .swiper-button-prev {
+    left: unset;
+    right: unset;
+    position: relative;
+    color: #D4313E;
+    margin-top: 0;
+  }
+}

@@ -169,6 +169,11 @@
             gap: 10px;
             align-items: center;
             cursor: pointer;
+            span {
+                color: #fff;
+                position: relative;
+                z-index: 10000;
+            }
         }
 
         .list {

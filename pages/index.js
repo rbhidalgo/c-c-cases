@@ -75,8 +75,7 @@ export default function Home() {
 												<li>Dog House</li>
 											</ul>
 											<a href=''>
-												VIEW ALL AUDIO
-												<br /> & SOUND CASES
+												VIEW ALL CASES
 											</a>
 										</div>
 										<hr />
@@ -88,8 +87,7 @@ export default function Home() {
 												<li>Controllers</li>
 											</ul>
 											<a href=''>
-												VIEW ALL <br />
-												LIGHTING & STAGING CASES
+												VIEW ALL CASES
 											</a>
 										</div>
 										<hr />
@@ -100,8 +98,7 @@ export default function Home() {
 												<li>Cadillac Cases</li>
 											</ul>
 											<a href=''>
-												VIEW ALL CABLE <br />
-												TRUNK CASES
+												VIEW ALL CASES
 											</a>
 										</div>
 									</div>
@@ -121,7 +118,7 @@ export default function Home() {
 												<li>Amplifiers</li>
 												<li>Studio Monitors</li>
 											</ul>
-											<a href=''>VIEW ALL MUSICAL INSTRUMENT CASES</a>
+											<a href=''>VIEW ALL CASES</a>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -131,7 +128,7 @@ export default function Home() {
 												<li>Shock-Mount</li>
 												<li>Dog House</li>
 											</ul>
-											<a href=''>VIEW ALL RACK-MOUNT CASES</a>
+											<a href=''>VIEW ALL CASES</a>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -141,7 +138,7 @@ export default function Home() {
 												<li>Projectors</li>
 												<li>Computer Monitors</li>
 											</ul>
-											<a href=''>VIEW ALL LCD CASES</a>
+											<a href=''>VIEW ALL CASES</a>
 										</div>
 									</div>
 								</div>
@@ -160,7 +157,7 @@ export default function Home() {
 												<li>Lenses</li>
 												<li>Camera Sliders</li>
 											</ul>
-											<a href=''>VIEW ALL FILM CASES</a>
+											<a href=''>VIEW ALL CASES</a>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -170,7 +167,7 @@ export default function Home() {
 												<li>Utility Trunks</li>
 												<li>Chain Motor</li>
 											</ul>
-											<a href=''>VIEW ALL TOURING, RIGGING & STAGING CASES</a>
+											<a href=''>VIEW ALL CASES</a>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -180,7 +177,7 @@ export default function Home() {
 												<li>Custom Cases</li>
 												<li>Media Center</li>
 											</ul>
-											<a href=''>VIEW ALL OTHER CASES</a>
+											<a href=''>VIEW ALL CASES</a>
 										</div>
 									</div>
 								</div>
@@ -256,14 +253,27 @@ export default function Home() {
 					</div>
 					<div className={styles.reviews__container}>
 						<Swiper
-							navigation={true}
-							loop={true}
-							autoplay={{
-								delay: 2500,
-								disableOnInteraction: false,
-							}}
-							slidesPerView={3}
-							spaceBetween={36}
+							// navigation={true}
+              navigation= {{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+							// autoplay={{
+							// 	delay: 2500,
+							// 	disableOnInteraction: false,
+							// }}
+							slidesPerView={1}
+							spaceBetween={20}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 36,
+                },
+              }}
 							modules={[Navigation, Autoplay]}
 							className='mySwiper'>
 							<SwiperSlide>
@@ -332,8 +342,51 @@ export default function Home() {
 								</div>
 							</SwiperSlide>
 						</Swiper>
+            <div className="swiper-buttons">
+              <div className='swiper-button-prev'></div>
+              <div className='swiper-button-next'></div>
+            </div>
 					</div>
 				</section>
+        
+        <section className={styles.cases}>
+					<div className={styles.cases__bg}>
+						<img src='/img/get-started.jpg' alt='' />
+					</div>
+					<div className={styles.wrapper}>
+						<div className={styles.cases__heading}>
+							<h2 className={styles.heading__title}>Contact Us</h2>
+							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
+						</div>
+            <div className={styles.contact__form}>
+            <form
+              className={styles.form}
+              name='contact-us'
+              method='POST'
+              data-netlify='true'
+              data-netlify-honeypot='bot-field'>
+              <input
+                type='text'
+                placeholder='Company Name'
+                name='Company'
+                required
+              />
+              <input
+                type='text'
+                placeholder='Name'
+                name='Name'
+                required
+              />
+              <input type='email' name='email' placeholder='Email' required />
+              <input type='tel' placeholder='Phone Number' name='PhoneNumber' />
+              <textarea name='Message' rows='10' placeholder='Message' required />
+              <input type='hidden' name='form-name' value='contact-us' />
+              <button type='submit' className={styles.button}>Contact Us <span className={styles.arrow}>&#9656;</span></button>
+            </form>
+            </div>
+					</div>
+				</section>
+
 			</main>
 		</>
 	)

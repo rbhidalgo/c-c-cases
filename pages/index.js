@@ -5,6 +5,7 @@ import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import styles from '../styles/Home.module.scss'
+import Form from "../components/Contact"
 
 export default function Home() {
 	return (
@@ -37,7 +38,7 @@ export default function Home() {
 							</ul>
 						</div>
 						<div className={styles.hero__image}>
-							<img src='/img/case-02/cturn_33.png' alt='' />
+							<Image layout="responsive" width="600" height="600" src='/img/masthead-case.png' alt='' />
 						</div>
 					</div>
 				</section>
@@ -349,7 +350,7 @@ export default function Home() {
 					</div>
 				</section>
         
-        <section className={styles.cases}>
+    <section className={styles.cases}>
 					<div className={styles.cases__bg}>
 						<img src='/img/get-started.jpg' alt='' />
 					</div>
@@ -358,32 +359,7 @@ export default function Home() {
 							<h2 className={styles.heading__title}>Contact Us</h2>
 							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
 						</div>
-            <div className={styles.contact__form}>
-            <form
-              className={styles.form}
-              name='contact-us'
-              method='POST'
-              data-netlify='true'
-              data-netlify-honeypot='bot-field'>
-              <input
-                type='text'
-                placeholder='Company Name'
-                name='Company'
-                required
-              />
-              <input
-                type='text'
-                placeholder='Name'
-                name='Name'
-                required
-              />
-              <input type='email' name='email' placeholder='Email' required />
-              <input type='tel' placeholder='Phone Number' name='PhoneNumber' />
-              <textarea name='Message' rows='10' placeholder='Message' required />
-              <input type='hidden' name='form-name' value='contact-us' />
-              <button type='submit' className={styles.button}>Contact Us <span className={styles.arrow}>&#9656;</span></button>
-            </form>
-            </div>
+            <Form/>
 					</div>
 				</section>
 

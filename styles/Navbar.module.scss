@@ -31,13 +31,16 @@
         height: 100%;
         transition: all 0.4s ease;
 
-        @include bp(tb) {
-            max-width: 125px;
+        @include bp(dt) {
+            max-width: 100px;
+        }
+        @include bp(mb) {
+            max-width: 90px;
         }
     }
 
     .list {
-        font-weight: 800;
+        font-weight: 600;
         text-transform: uppercase;
         list-style: none;
         display: flex;
@@ -130,7 +133,7 @@
 
     .quote {
         padding: 12px 16px;
-        font-size: clamp(14px, 1.5vw, 16px);
+        font-size: clamp(12px, 1.5vw, 16px);
         font-weight: 900;
         color: $color-primary;
         background-color: $color-secondary;
@@ -142,7 +145,8 @@
             margin-right: 20px;
         }
         @include bp(mb) {
-          display: none;
+          padding: 6px 12px;
+          margin-right: auto;
         }
         &:hover {
             color: #ffffff;
@@ -232,7 +236,6 @@
                         transform: rotate(45deg) translateY(-6px) translate(-8px);
                     }
                 }
-
                 z-index: 10000;
             }
         }

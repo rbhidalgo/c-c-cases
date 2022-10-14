@@ -11,7 +11,12 @@ const menu = [
     {
         title: 'Home',
         path: '/'
-    }, {
+      }, 
+      {
+          title: 'About Us',
+          path: '/about-us/'
+      },
+      {
         title: 'Cases',
         path: '#',
         hasSubMenu: true,
@@ -45,10 +50,6 @@ const menu = [
         title: 'Services',
         path: '/services/'
     }, 
-    {
-        title: 'Contact',
-        path: '/contact/'
-    },
 ]
 
 const Navbar = () => {
@@ -228,7 +229,7 @@ const Navbar = () => {
                 </AnimatePresence>
 
                 <Link
-                href="/quote/"
+                href="/contact/"
                 passHref
                 >
                 <a className={styles.quote}>GET A QUOTE</a>

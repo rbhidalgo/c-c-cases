@@ -48,13 +48,20 @@
     font-size: clamp(18px, 2vw, 24px);
     list-style-position: outside;
     line-height: 1.5;
-    padding-left: 22px;
+    list-style: none;
     li {
       text-shadow: 0px 3px 6px #000000;
-      &::marker {
-        content: "☑";
-        font-size: 30px;
-        color: #a8a7ac;
+      position: relative;
+      padding-left: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 0;
+        background: url('../public/img/checkmark.svg');
+        background-size: cover;
+        background-position: bottom;
       }
     }
   }
@@ -77,7 +84,9 @@
     display: inline-block;
     margin-bottom: 25px;
     line-height: 1.8;
-    text-decoration: underline 5px $color-primary;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: $color-primary;
     text-underline-offset: 10px;
   }
   &__subtitle {
@@ -212,8 +221,10 @@
       text-transform: uppercase;
       font-weight: 700;
       line-height: 1.5;
-      text-decoration: underline 2px $color-primary;
-      text-underline-offset: 8px;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: $color-primary;
+      text-underline-offset: 10px;
       margin-bottom: 10px;
       display: inline-block;
     }

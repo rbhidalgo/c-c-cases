@@ -11,8 +11,10 @@
     display: inline-block;
     margin-bottom: 25px;
     line-height: 1.8;
-    text-decoration: underline 5px $color-primary;
-    text-underline-offset: 10px;
+    text-decoration: underline;
+      text-decoration-thickness: 5px;
+      text-decoration-color: $color-primary;
+      text-underline-offset: 10px;
   }
   &__subtitle {
     font-size: clamp(18px, 2vw, 24px);
@@ -23,9 +25,8 @@
 
 .list {
   font-size: clamp(16px, 2vw, 24px);
-  list-style-position: outside;
+  list-style: none;
   line-height: 1.5;
-  padding-left: 22px;
   column-count: 2;
   column-gap: 30px;
   @include bp(tb) {
@@ -33,11 +34,23 @@
   }
   li {
     text-shadow: 0px 3px 6px #000000;
-    &::marker {
-      content: "☑";
-      font-size: 30px;
-      color: #a8a7ac;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 0;
+      background: url('../public/img/checkmark.svg');
+      background-size: cover;
+      background-position: bottom;
     }
+  }
+  &__nav {
+    display: flex;
+    gap: 25px;
   }
 }
 
@@ -92,6 +105,7 @@
   }
   &__heading {
     margin-bottom: 100px;
+    scroll-margin-top: 150px;
     @include bp(tb) {
       margin-bottom: 50px;
     }
@@ -102,7 +116,6 @@
     align-items: stretch;
     gap: 70px;
     flex-wrap: wrap;
-    scroll-margin-top: 150px;
     @include bp(tb) {
       scroll-margin-top: 100px;
     }
@@ -111,14 +124,9 @@
     flex: 1 100%;
     margin-left: auto;
     margin-right: auto;
-    hr {
-      height: 1px;
-      border: none;
-      background: #A4A4A6;
-      margin-top: 100px;
-      @include bp(tb) {
-        display: none;
-      }
+    border-bottom: 1px solid #A4A4A6;
+    &:last-child {
+      border-bottom: unset;
     }
   }
   &__category_card {
@@ -140,6 +148,8 @@
     }
     &_card {
       flex: 1;
+      height: 100%;
+      width: 100%;
       padding: 25px;
       background-color: #fff;
       border-bottom: 5px solid $color-primary;
@@ -149,9 +159,13 @@
     }
   }
   &__catgory_wrapper {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 75px;
     color: #fff;
     height: 100%;
+    &:last-child {
+      padding-bottom: 50px;
+    }
     @include bp(tb) {
       padding: 25px 0 0 0;
     }
@@ -162,7 +176,9 @@
       text-transform: uppercase;
       font-weight: 700;
       line-height: 1.5;
-      text-decoration: underline 2px $color-primary;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: $color-primary;
       text-underline-offset: 10px;
       margin-bottom: 10px;
       display: inline-block;

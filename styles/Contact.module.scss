@@ -4,15 +4,17 @@
 .heading {
  margin-bottom: 50px;
  &__title {
-   font-size: clamp(24px, 2vw, 64px);
-   text-transform: uppercase;
-   text-shadow: 0px 3px 6px #161616;
-   font-weight: 700;
-   display: inline-block;
-   margin-bottom: 25px;
-   line-height: 1.8;
-   text-decoration: underline 5px $color-primary;
-   text-underline-offset: 10px;
+    font-size: clamp(24px, 2vw, 64px);
+    text-transform: uppercase;
+    text-shadow: 0px 3px 6px #161616;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $color-primary;
+    text-underline-offset: 10px;
  }
  &__subtitle {
    font-size: clamp(16px, 1.2vw, 24px);

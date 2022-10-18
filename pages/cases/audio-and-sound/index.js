@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../../styles/Cases.module.scss'
 import Form from "../../../components/Contact"
+import cases from '../../../data/audio-sound'
 
 export default function AudioSound() {
 	return (
@@ -32,91 +33,43 @@ export default function AudioSound() {
 								<li>Practical designs with endless possibilities.</li>
 								<li>Unmatchable customer service.</li>
 							</ul>
-							<ul className={styles.list_nav}>
-								<li><a href="#console">Console</a></li>
+							<ul className={styles.list__nav}>
+							{cases.map((cases, index) => <li key={index}>
+							<a href={`#${cases.id}`}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</a></li>
+							)}
 							</ul>
 						</div>
-
-						<div className={styles.cases__category_container} id="console">
-							<div className={styles.cases__category}>
+						{cases.map((cases, index) =>
+						<>
+							<h2 className={styles.cases__heading} id={cases.id}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</h2>
+						<div className={styles.cases__category_container} key={index}>
+											{cases.cases.map((item, index) => 
+							<div className={styles.cases__category} key={index}>
 								<div className={styles.cases__category_card}>
 									<div className={styles.cases__category_img}>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/01/audio-sound-console-etc-48-9601.jpg' alt='' />
+										{item.case.images.map((img, index) =>
+										<div className={styles.cases__category_img_card} key={index}>
+											<Image layout="responsive" width="800" height="800" src={img} alt={item.case.title} />
 										</div>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/01/audio-sound-console-etc-48-9603.jpg' alt='' />
-										</div>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/01/audio-sound-console-etc-48-9604.jpg' alt='' />
-										</div>
+										)}
 
 									</div>
 									<div className={styles.cases__catgory_wrapper}>
 										<div className={styles.cases__category_case}>
-											<h3>ETC Express 48-96 Lighting Console</h3>
+											<h3>{item.case.title}</h3>
 											<ul>
-												<li>Dimensions: L 48" x W 27" x H 8"</li>
-												<li>Discription: .375 Black ABS Panels - Corner Casters - Heavy Duty Hardware, Bottom Compartment Keyboard Cables and Tablet</li>
-											</ul>
-										</div>
-										<hr />
-									</div>
-								</div>
-							</div>
-							<div className={styles.cases__category}>
-								<div className={styles.cases__category_card}>
-									<div className={styles.cases__category_img}>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/02/audio-sound-console-etc-gio01.jpg' alt='' />
-										</div>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/02/audio-sound-console-etc-gio03.jpg' alt='' />
-										</div>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/02/audio-sound-console-etc-gio04.jpg' alt='' />
-										</div>
-
-									</div>
-									<div className={styles.cases__catgory_wrapper}>
-										<div className={styles.cases__category_case}>
-											<h3>ETC GIO Lighting Control Console</h3>
-											<ul>
-												<li>Dimensions: L 48" x W 27" x H 8"</li>
-												<li>Discription: .375 Black ABS Panels - Corner Casters - Heavy Duty Hardware ,Bottom Compartment Keyboard Cables and Tablet</li>
-											</ul>
-										</div>
-										<hr />
-									</div>
-								</div>
-							</div>
-							<div className={styles.cases__category}>
-								<div className={styles.cases__category_card}>
-									<div className={styles.cases__category_img}>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/03/audio-sound-console-etc-ion01.jpg' alt='' />
-										</div>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/03/audio-sound-console-etc-ion02.jpg' alt='' />
-										</div>
-										<div className={styles.cases__category_img_card}>
-										<img src='/img/cases/audio-sound/console/03/audio-sound-console-etc-ion04.jpg' alt='' />
-										</div>
-
-									</div>
-									<div className={styles.cases__catgory_wrapper}>
-										<div className={styles.cases__category_case}>
-											<h3>ETC Express 48-96 Lighting Console</h3>
-											<ul>
-												<li>Dimensions: L 45" x W 21" x H 11"</li>
-												<li>Discription: .25 Black ABS Panels,Heavy Duty Harware - Foam Interior - Bottom Door Compartment Keyboard Cables</li>
+												<li>Dimensions:  {item.case.dimensions}</li>
+												<li>Description:  {item.case.description}</li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-
+											)}
 						</div>
+						</>
+						)}
+
 					</div>
 				</section>
     <section className={styles.cases}>

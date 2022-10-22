@@ -11,6 +11,7 @@ const App = ({Component, pageProps, router}) => (
                 <meta
                     name="description"
                     content={Component.description ?? 'Page Description Goes Here'}/>
+                <link rel='icon' href='/favicon.ico' />
             </Head>
             <Layout>
                 <Component {...pageProps}/>

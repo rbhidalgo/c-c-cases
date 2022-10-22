@@ -16,9 +16,8 @@ export default function Home() {
 				</title>
 				<meta
 					name='description'
-					content='Custom-designed protection for high-quality musical instruments, lighting, stage, and film production equipment. Get true value for money with our premium cases.'
+					content='Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases.'
 				/>
-				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
 			<main className={styles.main}>

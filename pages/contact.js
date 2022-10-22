@@ -10,7 +10,7 @@ const Contact = () => {
 		</div>
 		<div className={styles.wrapper}>
 			<div className={styles.cases__heading}>
-				<h2 className={styles.heading__title}>Contact Us</h2>
+				<h1 className={styles.heading__title}>Contact Us</h1>
 				<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
 			</div>
 				<Form/>
@@ -30,5 +30,8 @@ const Contact = () => {
 				</>
 	)
 }
+
+Contact.title = "Contact C&C Cases Inc. - Custom-Made Road Cases in Los Angeles, California";
+Contact.description = "Contact C&C Cases Inc. - Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases.";
 
 export default Contact

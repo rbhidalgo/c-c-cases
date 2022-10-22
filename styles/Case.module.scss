@@ -1,0 +1,239 @@
+@import "mixins";
+@import "variables";
+
+.heading {
+  margin-bottom: 50px;
+  &__title {
+    font-size: clamp(24px, 2vw, 64px);
+    text-transform: uppercase;
+    text-shadow: 0px 3px 6px #161616;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-decoration: underline;
+      text-decoration-thickness: 5px;
+      text-decoration-color: $color-primary;
+      text-underline-offset: 10px;
+      @include bp(mb) {
+        text-decoration-thickness: 3px;
+      }
+  }
+  &__subtitle {
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+}
+
+.list {
+  font-size: clamp(16px, 2vw, 24px);
+  list-style: none;
+  line-height: 1.5;
+  column-count: 2;
+  column-gap: 30px;
+  @include bp(tb) {
+    column-count: 1;
+  }
+  li {
+    text-shadow: 0px 3px 6px #000000;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 0;
+      background: url('../public/img/checkmark.svg');
+      background-size: cover;
+      background-position: bottom;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 25px;
+    position: sticky;
+    top: 200px;
+  }
+}
+
+.list__nav {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 12px 15px 12px 18px;
+  background: $color-secondary;
+  overflow: hidden;
+  list-style-position: outside;
+  font-size: 14px;
+  text-transform: uppercase;
+  @include bp(tb) {
+    font-size: 12px;
+    display: block;
+    column-count: 2;
+    line-height: 1.8;
+    padding-left: 15px;
+  }
+  li {
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.wrapper {
+  max-width: 1800px;
+  padding-right: 120px;
+  padding-left: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include bp(dt) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  @include bp(tb) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.cases {
+  background: linear-gradient(180deg, #000000 50%, #1A1A1A 77%, #54545400 100%), url(../public/img/pattern-leather.jpg);
+  color: #fff;
+  padding-bottom: 100px;
+  &__bg {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #0000007C 0%, #000000 100%, #FFFFFF00 100%);
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+      vertical-align: bottom;
+      @include bp(tb) {
+        min-height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+  .wrapper {
+    position: relative;
+    z-index: 3;
+    margin-top: -150px;
+    @include bp(dt) {
+      margin-top: -100px;
+    }
+    @include bp(tb) {
+      margin-top: -50px;
+    }
+  }
+  &__heading {
+    margin-bottom: 100px;
+    scroll-margin-top: 150px;
+    @include bp(tb) {
+      margin-bottom: 50px;
+    }
+  }
+  &__category_container {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 70px;
+    flex-wrap: wrap;
+    @include bp(tb) {
+      scroll-margin-top: 100px;
+      margin-bottom: 100px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__category {
+    flex: 1 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #A4A4A6;
+    &:last-child {
+      border-bottom: unset;
+    }
+  }
+  &__category_card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    @include bp(tb) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__category_img {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    @include bp(dt) {
+      gap: 25px;
+    }
+    @include bp(tb) {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+    &_card {
+      flex: 0 1 30.333%;
+      height: 100%;
+      width: 100%;
+      padding: 25px;
+      background-color: #fff;
+      border-bottom: 5px solid $color-primary;
+      img {
+        vertical-align: bottom;
+      }
+      @include bp(tb) {
+        flex: 1 0 75%;
+        scroll-snap-align: center;
+        scroll-padding: 0 25px;
+      }
+    }
+  }
+  &__catgory_wrapper {
+    padding-top: 50px;
+    padding-bottom: 75px;
+    color: #fff;
+    @include bp(tb) {
+      padding: 25px 0 0 0;
+    }
+  }
+  &__category_case {
+    h3 {
+      font-size: clamp(18px, 1.5vw, 22px);
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.5;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-decoration-color: $color-primary;
+      text-underline-offset: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    ul {
+      font-size: clamp(16px, 1.5vw, 20px);
+      list-style: none;
+      line-height: 1.6;
+      @include bp(tb) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

@@ -7,11 +7,6 @@ body {
   scroll-behavior: smooth;
 }
 
-p {
-  font-size: clamp(16px, 1vw, 20px);
-  line-height: 1.5;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -53,5 +48,21 @@ main {
     position: relative;
     color: #D4313E;
     margin-top: 0;
+  }
+}
+
+p {
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.5;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.link {
+  transition: color .4s ease;
+  &:hover {
+    color: #D4313E;
   }
 }

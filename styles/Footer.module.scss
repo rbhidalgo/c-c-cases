@@ -4,7 +4,7 @@
   background-color: #000000;
   color: #ffffff;
   .container {
-    padding: 50px 25px;
+    padding: 50px 25px 100px 25px;
     display: flex;
     justify-content: space-between;
     @include bp(tb) {

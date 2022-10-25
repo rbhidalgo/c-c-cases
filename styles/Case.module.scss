@@ -61,24 +61,67 @@
 
 .list__nav {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 25px;
   width: 100%;
   justify-content: space-between;
-  margin-top: 50px;
-  padding: 12px 15px 12px 18px;
-  background: $color-secondary;
-  overflow: hidden;
-  list-style-position: outside;
+  padding: 20px 25px;
+  background: #f2f2f2;
+  color: $color-secondary;
+  list-style-type: none;
   font-size: 14px;
   text-transform: uppercase;
+  position: fixed;
+  top: unset;
+  bottom: 0;
+  z-index: 1000;
+    scrollbar-width: thin;/*thin;*/
+    scrollbar-color: $color-primary $color-secondary;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $color-secondary;        /* color of the tracking area */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary;    /* color of the scroll thumb */
+  }
   @include bp(tb) {
+    gap: 12px;
+    padding: 12px;
     font-size: 12px;
-    display: block;
-    column-count: 2;
     line-height: 1.8;
-    padding-left: 15px;
   }
   li {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $color-primary;
+    }
+    &:last-child {
+      &::after {
+        content: unset;
+      }
+    }
+    @include bp(dt) {
+      flex: 1 0 33%;
+    }
+    @include bp(tb) {
+      flex: 1 0 27%;
+    }
+    @include bp(mb) {
+      flex-basis: 38%;
+    }
     &:hover {
       color: $color-primary;
     }

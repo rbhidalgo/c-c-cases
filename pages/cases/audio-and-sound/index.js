@@ -33,11 +33,6 @@ export default function AudioSound() {
 								<li>Practical designs with endless possibilities.</li>
 								<li>Unmatchable customer service.</li>
 							</ul>
-							<ul className={styles.list__nav}>	
-							{cases.map((cases, index) => <li key={index}>
-							<a href={`#${cases.id}`}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</a></li>
-							)}
-							</ul>
 						</div>
 						{cases.map((cases, index) =>
 						<>
@@ -71,6 +66,13 @@ export default function AudioSound() {
 						)}
 
 					</div>
+				</section>
+				<section>
+				<ul className={styles.list__nav}>	
+							{cases.map((cases, index) => <li key={index}>
+							<a href={`#${cases.id}`}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</a></li>
+							)}
+							</ul>
 				</section>
     <section className={styles.cases}>
 					<div className={styles.cases__bg}>

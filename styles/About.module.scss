@@ -80,11 +80,12 @@
 }
 
 .list {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 18px);
   list-style: none;
   line-height: 1.5;
   column-count: 2;
   column-gap: 30px;
+  margin-bottom: 50px;
   @include bp(tb) {
     column-count: 1;
   }

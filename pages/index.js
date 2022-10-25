@@ -1,7 +1,8 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper'
-import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import styles from '../styles/Home.module.scss'
@@ -31,10 +32,11 @@ export default function Home() {
 							<ul className={styles.hero__list}>
 								<li>High-quality cases at fair prices.</li>
 								<li>Practical designs with endless possibilities.</li>
-								<li>
-									Unmatchable customer service and fastest turnaround time
-								</li>
+								<li>Unmatchable customer service and fastest turnaround time</li>
 							</ul>
+							<Link href="/contact/">
+          <a className={styles.button}>Contact Us <span className={styles.arrow}>&#9656;</span></a>
+        </Link>
 						</div>
 						<div className={styles.hero__image}>
 							<Image layout="responsive" width="600" height="600" src='/img/masthead-case.png' alt='' />
@@ -74,9 +76,9 @@ export default function Home() {
 												<li>Speakers </li>
 												<li>Dog House</li>
 											</ul>
-											<a href=''>
-												VIEW ALL CASES
-											</a>
+											<Link href="/cases/audio-and-sound/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -86,9 +88,9 @@ export default function Home() {
 												<li>Fixtures</li>
 												<li>Controllers</li>
 											</ul>
-											<a href=''>
-												VIEW ALL CASES
-											</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -97,9 +99,9 @@ export default function Home() {
 												<li>Truck Pack</li>
 												<li>Cadillac Cases</li>
 											</ul>
-											<a href=''>
-												VIEW ALL CASES
-											</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 									</div>
 								</div>
@@ -118,7 +120,9 @@ export default function Home() {
 												<li>Amplifiers</li>
 												<li>Studio Monitors</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/musical-instruments-and-gear/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -128,7 +132,9 @@ export default function Home() {
 												<li>Shock-Mount</li>
 												<li>Dog House</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -138,7 +144,9 @@ export default function Home() {
 												<li>Projectors</li>
 												<li>Computer Monitors</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 									</div>
 								</div>
@@ -157,7 +165,9 @@ export default function Home() {
 												<li>Lenses</li>
 												<li>Camera Sliders</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/film/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -167,7 +177,9 @@ export default function Home() {
 												<li>Utility Trunks</li>
 												<li>Chain Motor</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -177,7 +189,9 @@ export default function Home() {
 												<li>Custom Cases</li>
 												<li>Media Center</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 									</div>
 								</div>

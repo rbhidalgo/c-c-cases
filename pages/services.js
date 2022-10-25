@@ -19,8 +19,12 @@ const Services = () => {
                 <li>Repairs</li>
                 <li>Repurpose </li>
 							</ul>
-				<p className={styles.heading__subtitle}>Warranty:</p>
-        <p>C&C Road Cases offer a limited lifetime warranty on defects in hardware and workmanship as long as the product is used normally and in accordance with the original purpose it was designed for. Warranty is only valid for the life of the product to the original buyer. Damage arising out of negligence, misuse, tampering, normal wear, acts of good or otherwise are not covered by manufacturer warranty. Manufacturer will not indemnify buyer.</p>
+				<p>Warranty:<br/>
+        C&C Road Cases offer a limited lifetime warranty on defects in hardware and workmanship as long as the product is used normally and in accordance with the original purpose it was designed for. Warranty is only valid for the life of the product to the original buyer. Damage arising out of negligence, misuse, tampering, normal wear, acts of good or otherwise are not covered by manufacturer warranty. Manufacturer will not indemnify buyer.</p>
+			</div>
+			<div className={styles.cases__heading}>
+				<h1 className={styles.heading__title}>Contact Us</h1>
+				<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
 			</div>
 				<Form/>
 		</div>

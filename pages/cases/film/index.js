@@ -35,9 +35,9 @@ export default function AudioSound() {
 							</ul>
 						</div>
 						{cases.map((cases, index) =>
-						<>
+						<div key={index}>
 							<h2 className={styles.cases__heading} id={cases.id}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</h2>
-						<div className={styles.cases__category_container} key={index}>
+						<div className={styles.cases__category_container}>
 											{cases.cases.map((item, index) => 
 							<div className={styles.cases__category} key={index}>
 								<div className={styles.cases__category_card}>
@@ -62,7 +62,7 @@ export default function AudioSound() {
 							</div>
 											)}
 						</div>
-						</>
+						</div>
 						)}
 
 					</div>

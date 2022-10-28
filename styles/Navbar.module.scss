@@ -5,7 +5,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 20;
     background-color: rgba(242, 245, 169, 0);
     transition: all 0.4s linear;
     .wrapper {
@@ -19,7 +19,7 @@
         transition: all 0.4s linear;
 
         @include bp(dt) {
-            padding: 25px 25px 12px 12px;
+            padding: 25px 12px 12px 12px;
         }
     }
 
@@ -111,7 +111,7 @@
         background-color: rgba(0, 0, 0, 0.85);
 
         .wrapper {
-            padding: 10px 20px 10px 10px;
+            padding: 10px;
         }
 
         .list {

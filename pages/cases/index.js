@@ -1,5 +1,6 @@
 import styles from "../../styles/Cases.module.scss"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Cases = () => {
 	return (
@@ -37,9 +38,9 @@ const Cases = () => {
 												<li>Speakers </li>
 												<li>Dog House</li>
 											</ul>
-											<a href=''>
-												VIEW ALL CASES
-											</a>
+											<Link href="/cases/audio-and-sound/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -49,9 +50,9 @@ const Cases = () => {
 												<li>Fixtures</li>
 												<li>Controllers</li>
 											</ul>
-											<a href=''>
-												VIEW ALL CASES
-											</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -60,9 +61,9 @@ const Cases = () => {
 												<li>Truck Pack</li>
 												<li>Cadillac Cases</li>
 											</ul>
-											<a href=''>
-												VIEW ALL CASES
-											</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 									</div>
 								</div>
@@ -81,7 +82,9 @@ const Cases = () => {
 												<li>Amplifiers</li>
 												<li>Studio Monitors</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/musical-instruments-and-gear/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -91,7 +94,9 @@ const Cases = () => {
 												<li>Shock-Mount</li>
 												<li>Dog House</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -101,7 +106,9 @@ const Cases = () => {
 												<li>Projectors</li>
 												<li>Computer Monitors</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 									</div>
 								</div>
@@ -120,7 +127,9 @@ const Cases = () => {
 												<li>Lenses</li>
 												<li>Camera Sliders</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/film/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -130,7 +139,9 @@ const Cases = () => {
 												<li>Utility Trunks</li>
 												<li>Chain Motor</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 										<hr />
 										<div className={styles.cases__category_case}>
@@ -140,7 +151,9 @@ const Cases = () => {
 												<li>Custom Cases</li>
 												<li>Media Center</li>
 											</ul>
-											<a href=''>VIEW ALL CASES</a>
+											<Link href="/cases/">
+          			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
+       					</Link>
 										</div>
 									</div>
 								</div>

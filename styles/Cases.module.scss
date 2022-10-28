@@ -34,8 +34,8 @@
     padding-right: 75px;
   }
   @include bp(tb) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -58,6 +58,10 @@
     img {
       width: 100%;
       vertical-align: bottom;
+      @include bp(tb) {
+        min-height: 200px;
+        object-fit: cover;
+      }
     }
   }
   .wrapper {

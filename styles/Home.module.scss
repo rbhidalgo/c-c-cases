@@ -108,8 +108,8 @@
     padding-right: 75px;
   }
   @include bp(tb) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -254,6 +254,9 @@
     display: flex;
     gap: 70px;
     flex-wrap: wrap;
+    @include bp(mb) {
+      flex-direction: column;
+    }
   }
   &__item {
     flex: 1;

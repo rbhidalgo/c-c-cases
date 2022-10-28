@@ -14,7 +14,7 @@ const menu = [
       }, 
       {
           title: 'About Us',
-          path: '/about-us/'
+          path: '/about-us'
       },
       {
         title: 'Cases',
@@ -22,33 +22,33 @@ const menu = [
         hasSubMenu: true,
         subMenu: [
           {title: 'ALL CASES',
-          path: '/cases/'},
+          path: '/cases'},
           {title: 'AUDIO & SOUND',
-          path: '/cases/audio-and-sound/'},
+          path: '/cases/audio-and-sound'},
           {title: 'LIGHTING & STAGING',
-          path: '/cases/lighting-and-staging/'},
+          path: '/cases/lighting-and-staging'},
           {title: 'CABLE TRUNKS',
-          path: '/cases/cable-trunks/'},
+          path: '/cases/cable-trunks'},
           {title: 'MUSICAL INSTRUMENTS & GEAR',
-          path: '/cases/musical-instruments-and-gear/'},
+          path: '/cases/musical-instruments-and-gear'},
           {title: 'RACK-MOUNT CASES',
-          path: '/cases/rack-mount-cases/'},
+          path: '/cases/rack-mount-cases'},
           {title: 'LCD',
-          path: '/cases/lcd/'},
+          path: '/cases/lcd'},
           {title: 'FILM',
-          path: '/cases/film/'},
+          path: '/cases/film'},
           {title: 'TOURING, RIGGING & STAGING',
-          path: '/cases/touring-rigging-staging/'},
+          path: '/cases/touring-rigging-staging'},
           {title: 'OTHERS',
-          path: '/cases/others/'},
+          path: '/cases/others'},
         ]
     }, {
         title: 'Materials',
-        path: '/materials/'
+        path: '/materials'
     }, 
     {
         title: 'Services',
-        path: '/services/'
+        path: '/services'
     }, 
 ]
 
@@ -76,18 +76,19 @@ const Navbar = () => {
     const [subMenu, toggleSubMenu] = useState(false);
 
 
-    let isPageWide = useMediaQuery('(max-width: 768px)')
+    let isMobile = useMediaQuery('(max-width: 768px)')
 
     // const toggleSubMenu = () => {
-    //   isPageWide ? toggleClick(!isClick) : toggleMouse(!isMouse);
+    //   isMobile ? toggleClick(!isClick) : toggleMouse(!isMouse);
     // };
 
     const handleClick = (e) => {
-      e.preventDefault();
-      toggleSubMenu(!subMenu)
+      // e.preventDefault();
+      // toggleSubMenu(false)
+      // setOpen(!open)
     };
 
-    const variants = isPageWide ? {
+    const variants = isMobile ? {
       open: { 
         opacity: 1, 
         x: 0, 
@@ -102,7 +103,7 @@ const Navbar = () => {
       closed: { opacity: 1, x: 0 },
     }
 
-    const subMenuAnimate = isPageWide ? {
+    const subMenuAnimate = isMobile ? {
       enter: {
         opacity: 1,
         height: 'auto',
@@ -181,15 +182,14 @@ const Navbar = () => {
                                 className={`${router.pathname === item.path
                                 ? styles.active
                                 : ''}`}
-                                onClick={item.hasSubMenu ? (e) => handleClick(e) : () => toggleSubMenu(false)}
+                                onClick={item.hasSubMenu && isMobile ? () => toggleSubMenu(!subMenu) : () => setOpen(!open)}
                                 onTouchStart={ item.hasSubMenu ? () => 
-                                  toggleSubMenu(true) : () => 
-                                    null
-                                }
-                                onMouseEnter={ item.hasSubMenu && !isPageWide ? () => 
                                   toggleSubMenu(true) : null
                                 }
-                                onMouseLeave={ item.hasSubMenu && !isPageWide ? () => 
+                                onMouseEnter={ item.hasSubMenu && !isMobile ? () => 
+                                  toggleSubMenu(true) : null
+                                }
+                                onMouseLeave={ item.hasSubMenu && !isMobile ? () => 
                                   toggleSubMenu(false) : null
                                 }
                                 >
@@ -202,15 +202,16 @@ const Navbar = () => {
                           initial="exit"
                           animate={() => subMenu ? "enter" : "exit"}
                           variants={subMenuAnimate}
-                          onMouseEnter={ !isPageWide ? () => toggleSubMenu(true) : null
+                          onClick={item.hasSubMenu && isMobile ? () => toggleSubMenu(true) : () => toggleSubMenu(false)}
+                          onMouseEnter={ !isMobile ? () => toggleSubMenu(true) : null
                           }
-                          onMouseLeave={ !isPageWide ? () => toggleSubMenu(false) : null
+                          onMouseLeave={ !isMobile ? () => toggleSubMenu(false) : null
                           }
-                        >
+                          >
                           {item.subMenu.map((sub, index) => 
                             <li 
                             key={index}
-                            className={styles.subMenuItem}
+                            onClick={isMobile ? () => setOpen(!open) : () => toggleSubMenu(false)}
                             >
                               <Link href={sub.path} passHref>
                             <a

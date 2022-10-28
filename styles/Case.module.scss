@@ -75,7 +75,7 @@
   position: fixed;
   top: unset;
   bottom: 0;
-  z-index: 1000;
+  z-index: 10;
     scrollbar-width: thin;/*thin;*/
     scrollbar-color: $color-primary $color-secondary;
   &::-webkit-scrollbar {

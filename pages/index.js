@@ -13,11 +13,11 @@ export default function Home() {
 		<>
 			<Head>
 				<title>
-					Custom-Made Road Cases in Los Angeles, California – C&C Cases Inc.
+					Custom-Made Road Cases | Flight Cases in Los Angeles, California – C&C Cases Inc.
 				</title>
 				<meta
 					name='description'
-					content='Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases.'
+					content='Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases and flight cases.'
 				/>
 			</Head>
 

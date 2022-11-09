@@ -9,7 +9,7 @@ export default function AudioSound() {
 		<>
 			<Head>
 				<title>
-					Custom Musical Instruments & Gear Road Cases in Los Angeles, California – C&C Cases Inc.
+					Custom-Made Musical Instruments & Gear Road Cases | Flight Cases in Los Angeles, California – C&C Cases Inc.
 				</title>
 				<meta
 					name='description'
@@ -24,7 +24,7 @@ export default function AudioSound() {
 					</div>
 					<div className={styles.wrapper}>
 						<div className={styles.cases__heading}>
-							<h1 className={styles.heading__title}>Custom Musical Instruments & Gear Road Cases - Made in the USA 🇺🇸</h1>
+							<h1 className={styles.heading__title}>Custom-Made Musical Instruments & Gear Road Cases | Flight Cases - Made in the USA 🇺🇸</h1>
 							<h2 className={styles.heading__subtitle}><strong>The Ultimate Protection For Your Valuable Equipment</strong>.</h2>
 							<ul className={styles.list}>
 								<li>High-quality cases at fair prices.</li>

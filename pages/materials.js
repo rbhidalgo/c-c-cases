@@ -10,7 +10,7 @@ const Materials = () => {
 		</div>
 		<div className={styles.wrapper}>
 			<div className={styles.cases__heading}>
-				<h1 className={styles.heading__title}>Hand-picked components for top-quality Road Cases</h1>
+				<h1 className={styles.heading__title}>Hand-picked components for top-quality Road Cases | ATA Flight Cases</h1>
 				<h2 className={styles.heading__subtitle}>C&C Road Cases - Materials</h2>
         <ul className={styles.list}>
           <li>

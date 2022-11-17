@@ -9,7 +9,7 @@ export default function AudioSound() {
 		<>
 			<Head>
 				<title>
-					Custom Film Road Cases in Los Angeles, California – C&C Cases Inc.
+					Custom Film Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.
 				</title>
 				<meta
 					name='description'
@@ -24,7 +24,7 @@ export default function AudioSound() {
 					</div>
 					<div className={styles.wrapper}>
 						<div className={styles.cases__heading}>
-							<h1 className={styles.heading__title}>Custom Film Road Cases - Made in the USA 🇺🇸</h1>
+							<h1 className={styles.heading__title}>Custom Film Road Cases | ATA Flight Cases - Made in the USA 🇺🇸</h1>
 							<h2 className={styles.heading__subtitle}><strong>Protect Your Equipment And Be Road-Ready</strong>.</h2>
 							<ul className={styles.list}>
 								<li>High-quality cases at fair prices.</li>

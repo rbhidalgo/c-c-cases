@@ -35,16 +35,16 @@ const film = [
   ]
  },
  {
- id: "lense",
+ id: "lens",
  cases: [{
   case: {
    title: "Anamorphic Cooke Lens x7",
    dimensions: 'L 24.375" x W 15" x H 17.25"',
    description: '',
    images : [
-    '/img/cases/film/lense/01/01.jpg',
-    '/img/cases/film/lense/01/02.jpg',
-    '/img/cases/film/lense/01/03.jpg'
+    '/img/cases/film/lens/01/01.jpg',
+    '/img/cases/film/lens/01/02.jpg',
+    '/img/cases/film/lens/01/03.jpg'
    ]
   }},
   {case: {
@@ -52,9 +52,9 @@ const film = [
    dimensions: 'L 13.625" x W 9.25" x H 10.25"',
    description: '',
    images : [
-    '/img/cases/film/lense/02/01.jpg',
-    '/img/cases/film/lense/02/02.jpg',
-    '/img/cases/film/lense/02/03.jpg'
+    '/img/cases/film/lens/02/01.jpg',
+    '/img/cases/film/lens/02/02.jpg',
+    '/img/cases/film/lens/02/03.jpg'
    ]
   }},
   {case: {
@@ -62,9 +62,9 @@ const film = [
    dimensions: 'L 24.375" x W 15" x H 17.25"',
    description: '',
    images : [
-    '/img/cases/film/lense/03/01.jpg',
-    '/img/cases/film/lense/03/02.jpg',
-    '/img/cases/film/lense/03/03.jpg'
+    '/img/cases/film/lens/03/01.jpg',
+    '/img/cases/film/lens/03/02.jpg',
+    '/img/cases/film/lens/03/03.jpg'
    ]
   }},
   {case: {
@@ -72,9 +72,9 @@ const film = [
    dimensions: 'L 14.5" x W 9" x H 13.25"',
    description: '',
    images : [
-    '/img/cases/film/lense/04/01.jpg',
-    '/img/cases/film/lense/04/02.jpg',
-    '/img/cases/film/lense/04/03.jpg'
+    '/img/cases/film/lens/04/01.jpg',
+    '/img/cases/film/lens/04/02.jpg',
+    '/img/cases/film/lens/04/03.jpg'
    ]
   }},
   {case: {
@@ -82,9 +82,9 @@ const film = [
    dimensions: 'L 19.5" x W 16.5" x H 10.375"',
    description: '',
    images : [
-    '/img/cases/film/lense/05/01.jpg',
-    '/img/cases/film/lense/05/02.jpg',
-    '/img/cases/film/lense/05/03.jpg'
+    '/img/cases/film/lens/05/01.jpg',
+    '/img/cases/film/lens/05/02.jpg',
+    '/img/cases/film/lens/05/03.jpg'
    ]
   }},
   ]

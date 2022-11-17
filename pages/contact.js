@@ -11,7 +11,7 @@ const Contact = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.cases__heading}>
 				<h1 className={styles.heading__title}>Contact Us</h1>
-				<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
+				<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call <a href="tel:+818-383-0165" class="link">(818) 383-0165</a>. You can also contact us using our form below.</p>
 			</div>
 				<Form/>
 		</div>
@@ -20,7 +20,7 @@ const Contact = () => {
 			<div className={styles.map}>
 			<div className={styles.cases__heading}>
 				<h2 className={styles.heading__title}>Info</h2>
-				<p className={styles.heading__subtitle}>Our location: 300 S. Sycamore Av.e Bldg B Rialto CA, 92376<br/>
+				<p className={styles.heading__subtitle}>Our location: 300 S. Sycamore Ave. Bldg B Rialto CA, 92376<br/>
 				Business Hours:  Mon-Fri: 7am-5pm<br/> 
 				Office Phone: (818) 383-0165</p>
 			</div>

@@ -11,7 +11,7 @@ const Cases = () => {
 					</div>
 					<div className={styles.wrapper}>
 						<div className={styles.cases__heading}>
-							<h2 className={styles.heading__title}>Explore Our Custom-Made Road Cases | Flight Cases</h2>
+							<h1 className={styles.heading__title}>Explore Our Custom-Made Road Cases | ATA Flight Cases</h1>
 							<p className={styles.heading__subtitle}>
 								C&C Cases Inc. has been in the industry for 15+ years, offering
 								rock-solid custom cases in Los Angeles, California, to protect

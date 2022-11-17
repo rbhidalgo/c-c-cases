@@ -14,7 +14,7 @@ const menu = [
       }, 
       {
           title: 'About Us',
-          path: '/about-us'
+          path: '/about-us/'
       },
       {
         title: 'Cases',
@@ -22,33 +22,33 @@ const menu = [
         hasSubMenu: true,
         subMenu: [
           {title: 'ALL CASES',
-          path: '/cases'},
+          path: '/cases/'},
           {title: 'AUDIO & SOUND',
-          path: '/cases/audio-and-sound'},
+          path: '/cases/audio-and-sound/'},
           {title: 'LIGHTING & STAGING',
-          path: '/cases/lighting-and-staging'},
+          path: '/cases/lighting-and-staging/'},
           {title: 'CABLE TRUNKS',
-          path: '/cases/cable-trunks'},
+          path: '/cases/cable-trunks/'},
           {title: 'MUSICAL INSTRUMENTS & GEAR',
-          path: '/cases/musical-instruments-and-gear'},
+          path: '/cases/musical-instruments-and-gear/'},
           {title: 'RACK-MOUNT CASES',
-          path: '/cases/rack-mount-cases'},
+          path: '/cases/rack-mount-cases/'},
           {title: 'LCD',
-          path: '/cases/lcd'},
+          path: '/cases/lcd/'},
           {title: 'FILM',
-          path: '/cases/film'},
+          path: '/cases/film/'},
           {title: 'TOURING, RIGGING & STAGING',
-          path: '/cases/touring-rigging-staging'},
+          path: '/cases/touring-rigging-staging/'},
           {title: 'OTHERS',
-          path: '/cases/others'},
+          path: '/cases/others/'},
         ]
     }, {
         title: 'Materials',
-        path: '/materials'
+        path: '/materials/'
     }, 
     {
         title: 'Services',
-        path: '/services'
+        path: '/services/'
     }, 
 ]
 

@@ -13,11 +13,11 @@ export default function Home() {
 		<>
 			<Head>
 				<title>
-					Custom-Made Road Cases | Flight Cases in Los Angeles, California – C&C Cases Inc.
+					Custom-Made Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.
 				</title>
 				<meta
 					name='description'
-					content='Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases and flight cases.'
+					content='Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases and ATA flight cases.'
 				/>
 			</Head>
 
@@ -26,13 +26,13 @@ export default function Home() {
 					<div className={styles.hero__wrapper}>
 						<div className={styles.hero__text}>
 							<h1 className={styles.hero__title}>
-								Custom-Made Road Cases To Fit Your Equipment. Manufactured In
+								Custom-Made Road Cases | ATA Flight Cases To Fit Your Equipment. Manufactured In
 								California
 							</h1>
 							<ul className={styles.hero__list}>
 								<li>High-quality cases at fair prices.</li>
 								<li>Practical designs with endless possibilities.</li>
-								<li>Unmatchable customer service and fastest turnaround time</li>
+								<li>Unmatchable customer service and fastest turnaround time.</li>
 							</ul>
 							<Link href="/contact/">
           <a className={styles.button}>Contact Us <span className={styles.arrow}>&#9656;</span></a>
@@ -53,8 +53,7 @@ export default function Home() {
 							<p className={styles.heading__subtitle}>
 								C&C Cases Inc. has been in the industry for 15+ years, offering
 								rock-solid custom cases in Los Angeles, California, to protect
-								your gear on the go. Our custom-made cases are impossibly
-								luxurious to protect and transport your investment. Our
+								your gear on the go. Our custom-made cases are built to protect and transport your investment. Our
 								practical designs will fit your equipment like a glove and
 								withstand any road abuse that hits them. Whether you need to add
 								accessory compartments, organizers, or wheels, we are up for any
@@ -72,9 +71,9 @@ export default function Home() {
 										<div className={styles.cases__category_case}>
 											<h3>AUDIO & SOUND</h3>
 											<ul>
-												<li>Consoles </li>
-												<li>Speakers </li>
-												<li>Dog House</li>
+												<li><a href="/cases/audio-and-sound/#console" className="link">Consoles</a> </li>
+												<li><a href="/cases/audio-and-sound/#speaker" className="link">Speakers</a> </li>
+												<li><a href="/cases/audio-and-sound/#dog-house" className="link">Dog House</a></li>
 											</ul>
 											<Link href="/cases/audio-and-sound/">
           			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
@@ -116,9 +115,9 @@ export default function Home() {
 										<div className={styles.cases__category_case}>
 											<h3>MUSICAL INSTRUMENTS & GEAR</h3>
 											<ul>
-												<li>Keyboards</li>
-												<li>Amplifiers</li>
-												<li>Studio Monitors</li>
+												<li><a href="/cases/musical-instruments-and-gear/#keyboard" className="link">Keyboards</a></li>
+												<li><a href="/cases/musical-instruments-and-gear/#amplifier" className="link">Amplifiers</a></li>
+												<li><a href="/cases/musical-instruments-and-gear/#studio-monitors" className="link">Studio Monitors</a></li>
 											</ul>
 											<Link href="/cases/musical-instruments-and-gear/">
           			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
@@ -130,7 +129,7 @@ export default function Home() {
 											<ul>
 												<li>Standard</li>
 												<li>Shock-Mount</li>
-												<li>Dog House</li>
+												<li><a href="/cases/audio-and-sound/#dog-house" className="link">Dog House</a></li>
 											</ul>
 											<Link href="/cases/">
           			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
@@ -161,8 +160,8 @@ export default function Home() {
 										<div className={styles.cases__category_case}>
 											<h3>FILM</h3>
 											<ul>
-												<li>Cameras</li>
-												<li>Lenses</li>
+												<li><a href="/cases/film/#camera" className="link">Cameras</a></li>
+												<li><a href="/cases/film/#camera" className="link">Film Lenses</a></li>
 												<li>Camera Sliders</li>
 											</ul>
 											<Link href="/cases/film/">
@@ -370,7 +369,7 @@ export default function Home() {
 					<div className={styles.wrapper}>
 						<div className={styles.cases__heading}>
 							<h2 className={styles.heading__title}>Contact Us</h2>
-							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
+							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call <a href="tel:+818-383-0165" class="link">(818) 383-0165</a>. You can also contact us using our form below.</p>
 						</div>
             <Form/>
 					</div>

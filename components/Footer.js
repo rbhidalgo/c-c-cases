@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <p>(818) 383-0165</p>
+                <p><a href="tel:+818-383-0165" class="link">(818) 383-0165</a></p>
                 <p>sales@ccroadcases.com</p>
                 <p>Made in the USA 🇺🇸</p>
                 <div className={styles.social}>

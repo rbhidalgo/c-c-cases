@@ -9,11 +9,11 @@ export default function AudioSound() {
 		<>
 			<Head>
 				<title>
-					Custom Audio & Sound Road Cases in Los Angeles, California – C&C Cases Inc.
+					Custom Audio & Sound Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.
 				</title>
 				<meta
 					name='description'
-					content='Custom-designed protection for high-quality musical instruments, lighting, stage, and film production equipment. Get true value for money with our premium cases.'
+					content='Custom-designed protection for high-quality musical instruments, lighting, stage, and film production equipment. Get true value for money with our premium ATA Flight cases.'
 				/>
 			</Head>
 

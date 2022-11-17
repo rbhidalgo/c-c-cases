@@ -71,9 +71,9 @@ export default function Home() {
 										<div className={styles.cases__category_case}>
 											<h3>AUDIO & SOUND</h3>
 											<ul>
-												<li><a href="/cases/audio-and-sound/#console" className="link">Consoles</a> </li>
-												<li><a href="/cases/audio-and-sound/#speaker" className="link">Speakers</a> </li>
-												<li><a href="/cases/audio-and-sound/#dog-house" className="link">Dog House</a></li>
+												<li><Link href="/cases/audio-and-sound/#console" passHref><a className="link">Consoles</a></Link></li>
+												<li><Link href="/cases/audio-and-sound/#speaker" passHref><a className="link">Speakers</a></Link></li>
+												<li><Link href="/cases/audio-and-sound/#dog-house" passHref><a className="link">Dog House</a></Link></li>
 											</ul>
 											<Link href="/cases/audio-and-sound/">
           			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
@@ -115,9 +115,9 @@ export default function Home() {
 										<div className={styles.cases__category_case}>
 											<h3>MUSICAL INSTRUMENTS & GEAR</h3>
 											<ul>
-												<li><a href="/cases/musical-instruments-and-gear/#keyboard" className="link">Keyboards</a></li>
-												<li><a href="/cases/musical-instruments-and-gear/#amplifier" className="link">Amplifiers</a></li>
-												<li><a href="/cases/musical-instruments-and-gear/#studio-monitors" className="link">Studio Monitors</a></li>
+												<li><Link href="/cases/musical-instruments-and-gear/#keyboard" passHref><a className="link">Keyboards</a></Link></li>
+												<li><Link href="/cases/musical-instruments-and-gear/#amplifier" passHref><a className="link">Amplifiers</a></Link></li>
+												<li><Link href="/cases/musical-instruments-and-gear/#studio-monitors" passHref><a className="link">Studio Monitors</a></Link></li>
 											</ul>
 											<Link href="/cases/musical-instruments-and-gear/">
           			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
@@ -129,7 +129,7 @@ export default function Home() {
 											<ul>
 												<li>Standard</li>
 												<li>Shock-Mount</li>
-												<li><a href="/cases/audio-and-sound/#dog-house" className="link">Dog House</a></li>
+												<li><Link href="/cases/audio-and-sound/#dog-house" passHref><a className="link">Dog House</a></Link></li>
 											</ul>
 											<Link href="/cases/">
           			<a className="link">VIEW ALL CASES <span className={styles.arrow}>&#9656;</span></a>
@@ -160,8 +160,8 @@ export default function Home() {
 										<div className={styles.cases__category_case}>
 											<h3>FILM</h3>
 											<ul>
-												<li><a href="/cases/film/#camera" className="link">Cameras</a></li>
-												<li><a href="/cases/film/#camera" className="link">Film Lenses</a></li>
+												<li><Link href="/cases/film/#camera" passHref><a className="link">Cameras</a></Link></li>
+												<li><Link href="/cases/film/#camera" passHref><a className="link">Film Lenses</a></Link></li>
 												<li>Camera Sliders</li>
 											</ul>
 											<Link href="/cases/film/">

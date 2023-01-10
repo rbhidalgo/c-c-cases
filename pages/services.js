@@ -32,5 +32,6 @@ const Services = () => {
 				</>
     )
 }
-
+Services.title = "Services - C&C Cases Inc. - Custom-Made Road Cases in Los Angeles, California";
+Services.description = "Services - C&C Cases Inc. - Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases.";
 export default Services

@@ -11,7 +11,7 @@ const About = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.cases__heading}>
 				<h1 className={styles.heading__title}>Reliable, functional, and robust road cases for your gear!</h1>
-				<p className={styles.heading__subtitle}>Founded in 2005 in Rialto, California, C&C Cases Inc. has been a family-owned business for over a decade. We only care about one thing: making sure you are 100% satisfied with your purchase. We do this by incorporating extensive quality assurance, fast lead time, utilizing premium materials, and offering competitive prices.</p>
+				<p className={styles.heading__subtitle}>Founded in 2005 in Los Angeles, California, C&C Cases Inc. has been a family-owned business for over a decade. We only care about one thing: making sure you are 100% satisfied with your purchase. We do this by incorporating extensive quality assurance, fast lead time, utilizing premium materials, and offering competitive prices.</p>
     <p>We build reliable, functional road cases and work closely with our clients to determine their needs. Our tailored road cases won’t only keep your equipment protected but fit your bill as well. Using state-of-the-art manufacturing techniques, we ensure every piece that comes out of our inventory is of the highest standards. You can choose from a variety of options for customizations, including color, storage options, organizers, wheels, and more.</p>
     <ul className={styles.list}>
 								<li>Hand-picked components for top-quality everything.</li>

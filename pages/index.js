@@ -12,9 +12,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>
-					Custom-Made Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.
-				</title>
+				<title>Custom-Made Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.</title>
 				<meta
 					name='description'
 					content='Custom-designed, high-quality protection for musical instruments, lighting, stage, and film production equipment. Get true value with our premium custom road cases and ATA flight cases.'
@@ -25,10 +23,8 @@ export default function Home() {
 				<section className={styles.hero}>
 					<div className={styles.hero__wrapper}>
 						<div className={styles.hero__text}>
-							<h1 className={styles.hero__title}>
-								Custom-Made Road Cases | ATA Flight Cases To Fit Your Equipment. Manufactured In
-								California
-							</h1>
+							<h1 className={styles.hero__title}>Custom-Made Road Cases | ATA Flight Cases To Fit Your Equipment. Manufactured In
+								California</h1>
 							<ul className={styles.hero__list}>
 								<li>High-quality cases at fair prices.</li>
 								<li>Practical designs with endless possibilities.</li>
@@ -51,7 +47,7 @@ export default function Home() {
 						<div className={styles.cases__heading}>
 							<h2 className={styles.heading__title}>Explore Our Cases</h2>
 							<p className={styles.heading__subtitle}>
-								C&C Cases Inc. has been in the industry for 15+ years, offering
+								C&C Cases Inc. has been in the industry for 18+ years with 31 years of experience, offering
 								rock-solid custom cases in Los Angeles, California, to protect
 								your gear on the go. Our custom-made cases are built to protect and transport your investment. Our
 								practical designs will fit your equipment like a glove and
@@ -257,7 +253,7 @@ export default function Home() {
 						<div className={styles.reviews__header}>
 							<h2 className={styles.heading__title}>Testimonials</h2>
 							<p className={styles.heading__subtitle}>
-								With our 15+ years of experience, we’ve delivered 100+ road
+								With our 18+ years of experience, we’ve delivered 100+ road
 								cases to our happy customers. Want to be our next happy
 								customer? Don’t just take it from us; here’s from people like
 								you who vouch for us.

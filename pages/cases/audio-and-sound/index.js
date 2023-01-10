@@ -1,10 +1,18 @@
+import { useRef, useEffect } from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../../styles/Case.module.scss'
 import Form from "../../../components/Contact"
 import cases from '../../../data/audio-sound'
 
+import { motion, AnimatePresence, useInView } from "framer-motion"
+
 export default function AudioSound() {
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+  useEffect(() => {
+    console.log("Element is in view: ", isInView)
+  }, [isInView])
 	return (
 		<>
 			<Head>
@@ -34,9 +42,28 @@ export default function AudioSound() {
 								<li>Unmatchable customer service.</li>
 							</ul>
 						</div>
+						<AnimatePresence>
 						{cases.map((cases, index) =>
-						<div key={index}>
-							<h2 className={styles.cases__heading} id={cases.id}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</h2>
+						<motion.div ref={ref} key={index} className={isInView ? "visible" : ""}
+						delay={.2 * index}
+						initial="hidden"
+            whileInView="visible"
+            viewport={{
+            once: true
+            }}
+            transition={{
+            duration: 0.8,
+        				}}
+            variants={{
+            visible: {
+                opacity: 1,
+            },
+            hidden: {
+                opacity: 0,
+            }}}
+						>
+							<h2
+							className={styles.cases__heading} id={cases.id}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</h2>
 						<div className={styles.cases__category_container}>
 											{cases.cases.map((item, index) => 
 							<div className={styles.cases__category} key={index}>
@@ -62,8 +89,9 @@ export default function AudioSound() {
 							</div>
 											)}
 						</div>
-						</div>
+						</motion.div>
 						)}
+						</AnimatePresence>
 
 					</div>
 				</section>

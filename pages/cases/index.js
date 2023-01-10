@@ -13,7 +13,7 @@ const Cases = () => {
 						<div className={styles.cases__heading}>
 							<h1 className={styles.heading__title}>Explore Our Custom-Made Road Cases | ATA Flight Cases</h1>
 							<p className={styles.heading__subtitle}>
-								C&C Cases Inc. has been in the industry for 15+ years, offering
+								C&C Cases Inc. has been in the industry for 18+ years, offering
 								rock-solid custom cases in Los Angeles, California, to protect
 								your gear on the go. Our custom-made cases are impossibly
 								luxurious to protect and transport your investment. Our

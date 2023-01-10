@@ -8,7 +8,7 @@ const Footer = () => {
             <div className={styles.container}>
                 <p><a href="tel:+818-383-0165" class="link">(818) 383-0165</a></p>
                 <p>sales@ccroadcases.com</p>
-                <p>Made in the USA 🇺🇸</p>
+                <p>Made to last, Made in the USA 🇺🇸</p>
                 <div className={styles.social}>
                     <a
                         href="https://www.facebook.com/"

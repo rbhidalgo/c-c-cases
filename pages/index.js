@@ -35,7 +35,7 @@ export default function Home() {
         </Link>
 						</div>
 						<div className={styles.hero__image}>
-							<Image layout="responsive" width="600" height="600" src='/img/masthead-case.png' alt='' />
+							<Image layout="responsive" width="600" height="600" src='/img/masthead-case.png' alt='c&c road case ata flight case' />
 						</div>
 					</div>
 				</section>

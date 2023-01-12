@@ -1,6 +1,5 @@
 import styles from "../styles/Footer.module.scss"
 import Image from "next/image"
-import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -11,13 +10,13 @@ const Footer = () => {
                 <p>Made to last, Made in the USA 🇺🇸</p>
                 <div className={styles.social}>
                     <a
-                        href="https://www.facebook.com/"
+                        href="https://www.facebook.com/100089652331536/"
                         target="_blank"
                         rel="noopener noreferrer">
                         <Image src="/img/icon-fb-white.png" width={25} height={23} alt=""/>
                     </a>
                     <a
-                        href="https://www.instagram.com/"
+                        href="https://www.instagram.com/ccroadcases/"
                         target="_blank"
                         rel="noopener noreferrer">
                         <Image src="/img/icon-ig-white.png" width={25} height={23} alt=""/>

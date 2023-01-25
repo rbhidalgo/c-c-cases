@@ -16,15 +16,16 @@ const App = ({Component, pageProps, router}) => (
                 {/* Google tag (gtag.js) */}
                 <Script src="https://www.googletagmanager.com/gtag/js?id=G-H6QETN9482"
                 strategy="afterInteractive"/>
-                <Script id="google-analytics" strategy="afterInteractive">
-                {`
+                <Script id="google-analytics" strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-
                 gtag('config', 'G-H6QETN9482');
-                `}
-                </Script>
+                `
+                }} />
+
             </Head>
             <Layout>
                 <Component {...pageProps}/>

@@ -35,7 +35,7 @@ export default function Home() {
         </Link>
 						</div>
 						<div className={styles.hero__image}>
-							<Image layout="responsive" width="600" height="600" src='/img/masthead-case.png' alt='c&c road case ata flight case' />
+							<Image layout="responsive" priority width="600" height="600" src='/img/masthead-case.png' alt='c&c road case ata flight case' />
 						</div>
 					</div>
 				</section>
@@ -248,7 +248,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className={styles.reviews}>
+				{/* <section className={styles.reviews}>
 					<div className={styles.wrapper}>
 						<div className={styles.reviews__header}>
 							<h2 className={styles.heading__title}>Testimonials</h2>
@@ -356,7 +356,7 @@ export default function Home() {
               <div className='swiper-button-next'></div>
             </div>
 					</div>
-				</section>
+				</section> */}
         
     <section className={styles.cases}>
 					<div className={styles.cases__bg}>
@@ -365,9 +365,9 @@ export default function Home() {
 					<div className={styles.wrapper}>
 						<div className={styles.cases__heading}>
 							<h2 className={styles.heading__title}>Contact Us</h2>
-							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call <a href="tel:+818-383-0165" class="link">(818) 383-0165</a>. You can also contact us using our form below.</p>
+							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call <a href="tel:+818-383-0165" className="link">(818) 383-0165</a>. You can also contact us using our form below.</p>
 						</div>
-            <Form/>
+       <Form/>
 					</div>
 				</section>
 

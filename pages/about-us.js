@@ -27,7 +27,7 @@ const About = () => {
 			</div>
 			<div className={styles.cases__heading}>
 				<h2 className={styles.heading__title}>Contact Us</h2>
-				<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call <a href="tel:+818-383-0165" class="link">(818) 383-0165</a>. You can also contact us using our form below.</p>
+				<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call <a href="tel:+818-383-0165" className="link">(818) 383-0165</a>. You can also contact us using our form below.</p>
 			</div>
 				<Form/>
 		</div>

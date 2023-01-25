@@ -25,7 +25,7 @@ const Contact = () => {
        <input type='tel' placeholder='Phone Number' name='PhoneNumber' />
        <textarea name='Message' rows='10' placeholder='Message' required />
        <input type='hidden' name='form-name' value='contact-us' />
-       <button type='submit' className={styles.button}>Contact Us <span className={styles.arrow}>&#9656;</span></button>
+       <button type='submit' className={styles.button}>Submit <span className={styles.arrow}>&#9656;</span></button>
      </form>
      </div>
     )

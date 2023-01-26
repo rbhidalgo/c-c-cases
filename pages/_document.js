@@ -9,9 +9,9 @@ class MyDocument extends Document {
         <link 
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" 
           rel="stylesheet"/>
-          <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-H6QETN9482"/>
+          <Script strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-H6QETN9482"/>
         {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <Script strategy="afterInteractive"
+        <Script strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];

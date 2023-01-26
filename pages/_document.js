@@ -8,6 +8,16 @@ class MyDocument extends Document {
         <link 
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" 
           rel="stylesheet"/>
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `,
+          }}
+        />
         </Head>
         <body>
           <Main />

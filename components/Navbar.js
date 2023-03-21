@@ -148,109 +148,109 @@ const Navbar = () => {
     };
 
     return (
-        <header>
-            <nav
-                className={`${navbar
-                ? styles.navContainer + " " + styles.scrolled
-                : styles.navContainer}`}>
-            <div className={styles.wrapper}>
-                <Link href="/" passHref>
-                    <span className={styles.logo}>
-                        <Image src={logo} layout='responsive' className={styles.logoImg} priority alt="logo"/>
-                    </span>
-                </Link>
-                <AnimatePresence>
-                <motion.ul
-                    initial="closed"
-                    animate={open ? "open" : "closed"}
-                    variants={variants}
-                    transition={{
-                      duration: 0.6,
-                      ease: "linear"
-                  }}
-                    className={`${open
-                    ? styles.list + " " + styles.open
-                    : styles.list}`}
-                    
-                    >
-                    {menu.map((item, index) => <li 
-                    className={styles.listItem} 
-                    key={index} 
-                    >
-                        <Link href={item.path} passHref>
-                            <a
-                                className={`${router.pathname === item.path
-                                ? styles.active
-                                : ''}`}
-                                onClick={item.hasSubMenu && isMobile ? () => toggleSubMenu(!subMenu) : () => setOpen(!open)}
-                                onTouchStart={ item.hasSubMenu ? () => 
-                                  toggleSubMenu(true) : null
-                                }
-                                onMouseEnter={ item.hasSubMenu && !isMobile ? () => 
-                                  toggleSubMenu(true) : null
-                                }
-                                onMouseLeave={ item.hasSubMenu && !isMobile ? () => 
-                                  toggleSubMenu(false) : null
-                                }
-                                >
-                                {item.title} {item.hasSubMenu ? <span>&#9660;</span> : ""}
-                            </a>
-                        </Link>
-                        {item.hasSubMenu ? 
-                          <motion.ul
-                          className={styles.subMenu}
-                          initial="exit"
-                          animate={() => subMenu ? "enter" : "exit"}
-                          variants={subMenuAnimate}
-                          onClick={item.hasSubMenu && isMobile ? () => toggleSubMenu(true) : () => toggleSubMenu(false)}
-                          onMouseEnter={ !isMobile ? () => toggleSubMenu(true) : null
-                          }
-                          onMouseLeave={ !isMobile ? () => toggleSubMenu(false) : null
-                          }
-                          >
-                          {item.subMenu.map((sub, index) => 
-                            <li 
-                            key={index}
-                            onClick={isMobile ? () => setOpen(!open) : () => toggleSubMenu(false)}
-                            >
-                              <Link href={sub.path} passHref>
-                            <a
-                                className={`${router.pathname === sub.path
-                                ? styles.active
-                                : ''}`}>
-                                {sub.title}
-                            </a>
-                        </Link>
-                            </li>
-                          )}
-                        </motion.ul>
-                        : ""}
-                    </li>)}
-                </motion.ul>
-                </AnimatePresence>
+      <header>
+          <nav
+              className={`${navbar
+              ? styles.navContainer + " " + styles.scrolled
+              : styles.navContainer}`}>
+          <div className={styles.wrapper}>
+              <Link href="/" passHref legacyBehavior>
+                  <span className={styles.logo}>
+                      <Image src={logo} layout='responsive' className={styles.logoImg} priority alt="logo"/>
+                  </span>
+              </Link>
+              <AnimatePresence>
+              <motion.ul
+                  initial="closed"
+                  animate={open ? "open" : "closed"}
+                  variants={variants}
+                  transition={{
+                    duration: 0.6,
+                    ease: "linear"
+                }}
+                  className={`${open
+                  ? styles.list + " " + styles.open
+                  : styles.list}`}
+                  
+                  >
+                  {menu.map((item, index) => <li 
+                  className={styles.listItem} 
+                  key={index} 
+                  >
+                      <Link
+                        href={item.path}
+                        passHref
+                        className={`${router.pathname === item.path
+                        ? styles.active
+                        : ''}`}
+                        onClick={item.hasSubMenu && isMobile ? () => toggleSubMenu(!subMenu) : () => setOpen(!open)}
+                        onTouchStart={ item.hasSubMenu ? () => 
+                          toggleSubMenu(true) : null
+                        }
+                        onMouseEnter={ item.hasSubMenu && !isMobile ? () => 
+                          toggleSubMenu(true) : null
+                        }
+                        onMouseLeave={ item.hasSubMenu && !isMobile ? () => 
+                          toggleSubMenu(false) : null
+                        }>
 
-                <Link
-                href="/contact/"
-                passHref
-                >
-                <a className={styles.quote}>GET A QUOTE</a>
-                </Link>
-                <div className={styles.mobileNav} onClick={() => setOpen(!open)}>
-                  <div
-                      className={`${open
-                      ? styles.hamburger + " " + styles.open
-                      : styles.hamburger}`}
-                      >
-                      <div className={styles.line}></div>
-                      <div className={styles.line}></div>
-                      <div className={styles.line}></div>
-                  </div>
-                  <span>MENU</span>
+                        {item.title} {item.hasSubMenu ? <span>&#9660;</span> : ""}
+
+                      </Link>
+                      {item.hasSubMenu ? 
+                        <motion.ul
+                        className={styles.subMenu}
+                        initial="exit"
+                        animate={() => subMenu ? "enter" : "exit"}
+                        variants={subMenuAnimate}
+                        onClick={item.hasSubMenu && isMobile ? () => toggleSubMenu(true) : () => toggleSubMenu(false)}
+                        onMouseEnter={ !isMobile ? () => toggleSubMenu(true) : null
+                        }
+                        onMouseLeave={ !isMobile ? () => toggleSubMenu(false) : null
+                        }
+                        >
+                        {item.subMenu.map((sub, index) => 
+                          <li 
+                          key={index}
+                          onClick={isMobile ? () => setOpen(!open) : () => toggleSubMenu(false)}
+                          >
+                            <Link
+                              href={sub.path}
+                              passHref
+                              className={`${router.pathname === sub.path
+                              ? styles.active
+                              : ''}`}>
+
+                              {sub.title}
+
+                            </Link>
+                          </li>
+                        )}
+                      </motion.ul>
+                      : ""}
+                  </li>)}
+              </motion.ul>
+              </AnimatePresence>
+
+              <Link href="/contact/" passHref className={styles.quote}>
+              GET A QUOTE
+              </Link>
+              <div className={styles.mobileNav} onClick={() => setOpen(!open)}>
+                <div
+                    className={`${open
+                    ? styles.hamburger + " " + styles.open
+                    : styles.hamburger}`}
+                    >
+                    <div className={styles.line}></div>
+                    <div className={styles.line}></div>
+                    <div className={styles.line}></div>
                 </div>
-                </div>
-            </nav>
-        </header>
-    )
+                <span>MENU</span>
+              </div>
+              </div>
+          </nav>
+      </header>
+    );
 }
 
 export default Navbar

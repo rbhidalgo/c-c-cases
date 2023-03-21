@@ -13,109 +13,107 @@ export default function AudioSound() {
   useEffect(() => {
     console.log("Element is in view: ", isInView)
   }, [isInView])
-	return (
-		<>
-			<Head>
-				<title>
-					Custom Audio & Sound Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.
-				</title>
-				<meta
-					name='description'
-					content='Custom-designed protection for high-quality musical instruments, lighting, stage, and film production equipment. Get true value for money with our premium ATA Flight cases.'
-				/>
-			</Head>
+	return <>
+        <Head>
+            <title>
+                Custom Audio & Sound Road Cases | ATA Flight Cases in Los Angeles, California – C&C Cases Inc.
+            </title>
+            <meta
+                name='description'
+                content='Custom-designed protection for high-quality musical instruments, lighting, stage, and film production equipment. Get true value for money with our premium ATA Flight cases.'
+            />
+        </Head>
 
-			<main className={styles.main}>
-				<section className={styles.cases}>
-					<div className={styles.cases__bg}>
-						<img src='/img/explore-cases.jpg' alt='' />
-					</div>
-					<div className={styles.wrapper}>
-						<div className={styles.cases__heading}>
-							<h1 className={styles.heading__title}>Custom Audio & Sound Road Cases - Made in the USA 🇺🇸</h1>
-							<h2 className={styles.heading__subtitle}><strong>Tour Better With Tailored-Fitted Road Cases</strong>.</h2>
-							<ul className={styles.list}>
-								<li>High-quality cases at fair prices.</li>
-								<li>Fastest turnaround time in the industry.</li>
-								<li>Open to new ideas and challenges.</li>
-								<li>Practical designs with endless possibilities.</li>
-								<li>Unmatchable customer service.</li>
-							</ul>
-						</div>
-						<AnimatePresence>
-						{cases.map((cases, index) =>
-						<motion.div ref={ref} key={index} className={isInView ? "visible" : ""}
-						delay={.2 * index}
-						initial="hidden"
-            whileInView="visible"
-            viewport={{
-            once: true
-            }}
-            transition={{
-            duration: 0.8,
-        				}}
-            variants={{
-            visible: {
-                opacity: 1,
-            },
-            hidden: {
-                opacity: 0,
-            }}}
-						>
-							<h2
-							className={styles.cases__heading} id={cases.id}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</h2>
-						<div className={styles.cases__category_container}>
-											{cases.cases.map((item, index) => 
-							<div className={styles.cases__category} key={index}>
-								<div className={styles.cases__category_card}>
-									<div className={styles.cases__category_img}>
-										{item.case.images.map((img, index) =>
-										<div className={styles.cases__category_img_card} key={index}>
-											<Image layout="responsive" width="800" height="800" src={img} alt={item.case.title} />
-										</div>
-										)}
+        <main className={styles.main}>
+            <section className={styles.cases}>
+                <div className={styles.cases__bg}>
+                    <img src='/img/explore-cases.jpg' alt='' />
+                </div>
+                <div className={styles.wrapper}>
+                    <div className={styles.cases__heading}>
+                        <h1 className={styles.heading__title}>Custom Audio & Sound Road Cases - Made in the USA 🇺🇸</h1>
+                        <h2 className={styles.heading__subtitle}><strong>Tour Better With Tailored-Fitted Road Cases</strong>.</h2>
+                        <ul className={styles.list}>
+                            <li>High-quality cases at fair prices.</li>
+                            <li>Fastest turnaround time in the industry.</li>
+                            <li>Open to new ideas and challenges.</li>
+                            <li>Practical designs with endless possibilities.</li>
+                            <li>Unmatchable customer service.</li>
+                        </ul>
+                    </div>
+                    <AnimatePresence>
+                    {cases.map((cases, index) =>
+                    <motion.div ref={ref} key={index} className={isInView ? "visible" : ""}
+                    delay={.2 * index}
+                    initial="hidden"
+        whileInView="visible"
+        viewport={{
+        once: true
+        }}
+        transition={{
+        duration: 0.8,
+                    }}
+        variants={{
+        visible: {
+            opacity: 1,
+        },
+        hidden: {
+            opacity: 0,
+        }}}
+                    >
+                        <h2
+                        className={styles.cases__heading} id={cases.id}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</h2>
+                    <div className={styles.cases__category_container}>
+                                        {cases.cases.map((item, index) => 
+                        <div className={styles.cases__category} key={index}>
+                            <div className={styles.cases__category_card}>
+                                <div className={styles.cases__category_img}>
+                                    {item.case.images.map((img, index) =>
+                                    <div className={styles.cases__category_img_card} key={index}>
+                                        <Image layout="responsive" width="800" height="800" src={img} alt={item.case.title} />
+                                    </div>
+                                    )}
 
-									</div>
-									<div className={styles.cases__catgory_wrapper}>
-										<div className={styles.cases__category_case}>
-											<h3>{item.case.title}</h3>
-											<ul>
-												<li>Dimensions:  {item.case.dimensions}</li>
-												{item.case.description ? <li>Description: {item.case.description}</li> : null}
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-											)}
-						</div>
-						</motion.div>
-						)}
-						</AnimatePresence>
+                                </div>
+                                <div className={styles.cases__catgory_wrapper}>
+                                    <div className={styles.cases__category_case}>
+                                        <h3>{item.case.title}</h3>
+                                        <ul>
+                                            <li>Dimensions:  {item.case.dimensions}</li>
+                                            {item.case.description ? <li>Description: {item.case.description}</li> : null}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                        )}
+                    </div>
+                    </motion.div>
+                    )}
+                    </AnimatePresence>
 
-					</div>
-				</section>
-				<section>
-				<ul className={styles.list__nav}>	
-							{cases.map((cases, index) => <li key={index}>
-							<a href={`#${cases.id}`}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</a></li>
-							)}
-							</ul>
-				</section>
-    <section className={styles.cases}>
-					<div className={styles.cases__bg}>
-						<img src='/img/get-started.jpg' alt='' />
-					</div>
-					<div className={styles.wrapper}>
-						<div className={styles.cases__heading}>
-							<h2 className={styles.heading__title}>Contact Us</h2>
-							<p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
-						</div>
-       <Form/>
-					</div>
-				</section>
+                </div>
+            </section>
+            <section>
+            <ul className={styles.list__nav}>	
+                        {cases.map((cases, index) => <li key={index}>
+                        <a href={`#${cases.id}`}>{cases.id.replace('-', ' ').replace(/(?:^|\s)\S/g, title => title.toUpperCase())} Cases</a></li>
+                        )}
+                        </ul>
+            </section>
+<section className={styles.cases}>
+                <div className={styles.cases__bg}>
+                    <img src='/img/get-started.jpg' alt='' />
+                </div>
+                <div className={styles.wrapper}>
+                    <div className={styles.cases__heading}>
+                        <h2 className={styles.heading__title}>Contact Us</h2>
+                        <p className={styles.heading__subtitle}>Have a project? Need a quote? Want to discuss something? Have an urgency and need even a better turnaround time? We understand it - let’s hop on a call. Contact us using our form below.</p>
+                    </div>
+   <Form/>
+                </div>
+            </section>
 
-			</main>
-		</>
-	)
+        </main>
+    </>;
 }

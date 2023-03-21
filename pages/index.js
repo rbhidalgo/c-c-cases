@@ -255,7 +255,7 @@ export default function Home() {
 				  <h2 className={styles.heading__title}>Our Latest Designs</h2>
 				  <p className={styles.heading__subtitle}>Looking for a reliable way to keep your gear safe on the go? Our durable road cases are just what you need! Follow us at <a href="https://www.instagram.com/ccroadcases/" target="_blank" rel="noopener" className={styles.link}>@ccroadcases</a> to check out our latest designs featuring heavy-duty construction, padded interiors, and secure latches that protect your equipment. Our cases are built to last and ensure that your valuable equipment stay protected during transportation. Click below on the image to view more details and discover the perfect road case for your needs.</p>
         </div>
-				<InstagramGallery accessToken="IGQVJXcENpRTBjOWNhTGY1QVBUR2s5U2lva1g1NmNKUHVqMTVUZA0tMclM4ZAUk0TjJELXBnbElReGFfanRuWUtBaVB3WnhlaktCVmdDYW1ubmN1SlZADRThDR3ZA2eG5XdTJBejR1Wk5GQUZAPZAWlLU3QzcwZDZD" count={6}/>
+				<InstagramGallery accessToken={process.env.NEXT_PUBLIC_INSTA_ID} count={6}/>
 				</section>
 
 				{/* <section className={styles.reviews}>
